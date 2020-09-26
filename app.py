@@ -6,6 +6,7 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 import FinalSentimentAnalysis as sent
 import jinja2
 # import send_mail
+import sklearn
 from sklearn.externals import joblib
 #import joblib
 # Initialize the Flask application
