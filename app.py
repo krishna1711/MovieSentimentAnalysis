@@ -6,8 +6,8 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 import FinalSentimentAnalysis as sent
 import jinja2
 # import send_mail
-#from sklearn.externals import joblib
-import joblib
+from sklearn.externals import joblib
+#import joblib
 # Initialize the Flask application
 app = Flask(__name__)
 # app.jinja_env.filters['zip'] = zip
