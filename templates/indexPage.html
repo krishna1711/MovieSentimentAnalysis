@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<meta charset="utf-8">
+	<style>
+		#myDIV {
+	  border: 16px solid #f3f3f3;
+	  border-radius: 50%;
+	  border-top: 16px solid #413841;
+	  width: 80px;
+	  height: 80px;
+	  -webkit-animation: spin 2s linear infinite; /* Safari */
+	  animation: spin 2s linear infinite;
+	}
+
+		@-webkit-keyframes spin {
+		0% { -webkit-transform: rotate(0deg); }
+		100% { -webkit-transform: rotate(360deg); }
+		}
+
+		@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+		}
+		#mytext{
+			font-size: 20px;
+		}
+		</style>
+
+	<title>Movie Review Sentiments</title>
+
+</head >
+  <!-- <body style="background-image:url('/static/img/inbkimg.png');background-repeat:no-repeat;background-size:auto;"> -->
+  <body style="background-image:url('/static/img/theater.png');background-color:#080808;background-repeat:no-repeat;background-size:60%;background-position:600px 100px;">
+
+	<form action="upload" method="post" enctype="multipart/form-data">
+			  <div style="padding: 20px 20px 20px 20px;">
+				<center><h1 style="color:#969696;font-family:sans-serif;">Movie sentimental Analysis</h1></center>
+				<!-- <div ><h5 style="color:#ffffff; font-style:italic;font-family:'Garamond', 'Georgia', serif;">This is a Application where you feed any movie review and will return if it is positive or negative.
+					<br/>Please be mindful if garbage input given then output would not be appropriate.</div> -->
+				<hr style="height:10px; width: 90%; color:balck;">
+				<h4 style="color:#779933;font-family:'Garamond', 'Georgia', serif;">Enter movie review</h4>
+				<textarea  required type="text" class="form-control border border-dark" multiple="" word-break = "break-all"; name="review" style="width:30%;height:200px;background-color:#ffffff;" placeholder="Please enter your movie review here"></textarea>
+				  <!-- <select name="loc" multiple> -->
+
+	
+
+			<div class="button-col" style="padding: 50px 100px;">
+				 <button type="submit"  class="btn btn-primary"  value="Get me sentiment" >Get me Sentiment</button>
+				<!-- <a type="submit" class="btn" href="http://203.193.165.234:50000/resume_recognition" target="_blank"><img src="assets/images/run-ocr.png" disabled alt="run-ocr">Run Intelligent OCR</a> -->
+			</div>
+			<script>
+			function myFunction() {
+				document.getElementById("myDIV").style.display = 'block';
+				document.getElementById("mytext").style.display = 'block';
+			}
+			</script>
+				<br />
+			</div>
+			<div style="align-items:center;padding-left : 800px;" class="container01" >
+				<div style="display:none; align:centre; padding:50px;" id = "myDIV"></div>
+				<div style="display:none;" id = "mytext">Loading...</div>
+			</div>
+			</form>
+  </body>
+</html>
